@@ -32,7 +32,7 @@ Cada ecuación se escribe en su forma explícita `y = mx + b` y se dibuja como u
 Una vez publicado en GitHub Pages estará disponible en:
 
 ```
-https://<tu-usuario>.github.io/graficador-sistemas-lineales/
+https://jcteacher-lab.github.io/graficador-sistemas-lineales/
 ```
 
 ---
