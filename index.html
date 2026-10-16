@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Graficador interactivo de sistemas de ecuaciones lineales 2x2 con método gráfico. Visualiza solución única, sistemas incompatibles y compatibles indeterminados.">
+  <meta name="author" content="Tu Nombre">
+  <title>Graficador de Sistemas Lineales 2×2</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Graficador de Sistemas Lineales 2×2</h1>
+      <p class="subtitle">Método gráfico interactivo · Zoom · Desplazamiento · Análisis automático</p>
+    </header>
+
+    <section class="panel" aria-label="Entrada de datos">
+      <div class="card card--blue">
+        <h3>Recta 1 &nbsp;<code>y = m₁x + b₁</code></h3>
+        <label for="m1">Pendiente (m₁)</label>
+        <input id="m1" type="number" step="any" value="-1" inputmode="decimal">
+        <label for="b1">Intercepto (b₁)</label>
+        <input id="b1" type="number" step="any" value="7" inputmode="decimal">
+      </div>
+
+      <div class="card card--red">
+        <h3>Recta 2 &nbsp;<code>y = m₂x + b₂</code></h3>
+        <label for="m2">Pendiente (m₂)</label>
+        <input id="m2" type="number" step="any" value="2" inputmode="decimal">
+        <label for="b2">Intercepto (b₂)</label>
+        <input id="b2" type="number" step="any" value="1" inputmode="decimal">
+      </div>
+    </section>
+
+    <section class="botones" aria-label="Controles">
+      <button id="btnGraficar" type="button">Graficar</button>
+      <button id="btnCentrar" type="button" class="secundario">Centrar vista</button>
+      <button id="btnEjemplo" type="button" class="secundario">Ejemplo aleatorio</button>
+    </section>
+
+    <div id="resultado" role="status" aria-live="polite"></div>
+
+    <div class="canvas-wrap">
+      <canvas id="canvas" aria-label="Plano cartesiano con las rectas del sistema"></canvas>
+    </div>
+
+    <p class="info">
+      🔍 Rueda del ratón = Zoom &nbsp;|&nbsp; 🖱️ Arrastrar = Desplazar &nbsp;|&nbsp;
+      📱 Táctil compatible
+    </p>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
