@@ -145,7 +145,7 @@ Este proyecto se distribuye bajo la **Licencia Pública General GNU v3.0 (GPL-3.
 Consulta el archivo [LICENSE](./LICENSE) para más detalles.
 
 ```
-Copyright (C) 2025  Tu Nombre
+Copyright (C) 2026 Juan Carlos Santiago Sánchez
 
 Este programa es software libre: puedes redistribuirlo y/o modificarlo
 bajo los términos de la Licencia Pública General GNU publicada por la
@@ -158,8 +158,8 @@ elección) cualquier versión posterior.
 ## 👤 Autor
 
 **Tu Nombre**
-- GitHub: [@tu-usuario](https://github.com/tu-usuario)
-- Correo: tu-correo@example.com
+- GitHub: [@jcteacher-lab](https://github.com/jcteacher-lab)
+- Correo: juancarlos.santiago.cb161@dgeti.sems.gob.mx
 
 ---
 
