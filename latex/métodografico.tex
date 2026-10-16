@@ -1,0 +1,573 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\geometry{margin=2.5cm}
+\setlength{\parindent}{0pt}
+
+% Título del índice (babel lo sobrescribe si se redefine fuera de \addto)
+\addto\captionsspanish{\renewcommand{\contentsname}{Índice}}
+
+% Índice: secciones y subsecciones
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+
+\hypersetup{
+  pdftitle={Método gráfico para sistemas de ecuaciones 2x2},
+  pdfauthor={MTI. Juan Carlos Santiago Sánchez},
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=blue
+}
+
+\title{MÉTODO GRÁFICO PARA SISTEMAS DE ECUACIONES \(2\times 2\)\\[0.3em]
+\large Guía didáctica: teoría, ejemplos resueltos, ejercicios y soluciones}
+\author{MTI. Juan Carlos Santiago Sánchez\\[0.2em]
+\texttt{juancarlos.santiago.cb161@dgeti.sems.gob.mx}}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begingroup
+  \setlength{\parskip}{0pt}
+  \tableofcontents
+\endgroup
+\newpage
+
+%==========================================================
+% Material introductorio
+%==========================================================
+
+\phantomsection
+\section*{Presentación}
+\addcontentsline{toc}{section}{Presentación}
+
+Esta guía está dedicada exclusivamente al \textbf{método gráfico} para resolver sistemas de dos ecuaciones lineales con dos incógnitas. Se estudian la interpretación geométrica de cada ecuación, los tres tipos de solución posibles (única, ninguna e infinitas), las técnicas de trazado (tabla de valores e intersecciones con los ejes) y la lectura del punto de intersección. Se incluyen cuatro ejemplos resueltos paso a paso, con gráficas, tablas y verificación, así como un banco de veinte ejercicios con sus soluciones.
+
+\phantomsection
+\section*{Propósito general}
+\addcontentsline{toc}{section}{Propósito general}
+
+Comprender y aplicar el método gráfico para resolver sistemas de dos ecuaciones lineales con dos incógnitas, interpretando geométricamente cada ecuación como una recta y clasificando el sistema según la relación entre ambas rectas.
+
+\phantomsection
+\section*{Competencias esperadas}
+\addcontentsline{toc}{section}{Competencias esperadas}
+
+\begin{itemize}
+  \item Interpretar geométricamente un sistema \(2\times 2\) como intersección de rectas.
+  \item Clasificar el sistema (solución única, sin solución, infinitas soluciones) a partir del determinante y de la observación gráfica.
+  \item Trazar rectas mediante tabla de valores y mediante intersecciones con los ejes.
+  \item Localizar el punto de intersección y verificar la solución en las ecuaciones originales.
+  \item Modelar situaciones contextualizadas y resolverlas gráficamente.
+\end{itemize}
+
+\newpage
+
+%==========================================================
+\section{Sistemas de dos ecuaciones con dos incógnitas}
+%==========================================================
+
+Un sistema \(2\times 2\) está formado por dos ecuaciones lineales que comparten dos incógnitas, normalmente \(x\) e \(y\).
+
+\[
+\begin{cases}
+a_1 x + b_1 y = c_1 \\
+a_2 x + b_2 y = c_2
+\end{cases}
+\]
+
+Una solución es un par ordenado \((x,y)\) que satisface simultáneamente ambas ecuaciones. Geométricamente, cada ecuación representa una recta y la solución corresponde a su punto de intersección, si existe.
+
+\textbf{Ejemplo introductorio:}
+\[
+\begin{cases}
+2x + y = 7 \\
+x - y = 2
+\end{cases}
+\]
+
+La solución es \((3,1)\), porque \(2(3)+1=7\) y \(3-1=2\).
+
+%==========================================================
+\section{Interpretación gráfica y tipos de solución}
+%==========================================================
+
+Cada ecuación lineal en dos variables representa una recta en el plano cartesiano. Resolver el sistema equivale a determinar la relación entre ambas rectas.
+
+\begin{itemize}
+  \item \textbf{Una solución:} las rectas se intersectan en un único punto (rectas con pendientes distintas).
+  \item \textbf{Ninguna solución:} las rectas son paralelas y distintas (misma pendiente, distinta ordenada al origen).
+  \item \textbf{Infinitas soluciones:} ambas ecuaciones representan la misma recta (rectas coincidentes).
+\end{itemize}
+
+Para el sistema \(a_1x+b_1y=c_1\), \(a_2x+b_2y=c_2\), el determinante de coeficientes \(\Delta = a_1b_2-a_2b_1\) permite anticipar la situación.
+
+\begin{center}
+\begin{tabular}{p{3cm}p{5cm}p{5cm}}
+\toprule
+Determinante \(\Delta\) & Relación entre rectas & Tipo de solución \\
+\midrule
+\(\Delta \ne 0\) & Se cortan en un punto & Solución única (compatible determinado) \\
+\(\Delta = 0\) y rectas coincidentes & Son la misma recta & Infinitas soluciones (compatible indeterminado) \\
+\(\Delta = 0\) y rectas paralelas & No se cortan & Sin solución (incompatible) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+%==========================================================
+\section{Método gráfico}
+%==========================================================
+
+El método gráfico consiste en representar ambas ecuaciones como rectas en el plano cartesiano y localizar visualmente su punto de intersección. Es la interpretación geométrica del sistema: cada ecuación lineal es una recta, y su solución es el punto donde se cortan.
+
+\subsection{Técnicas de trazado}
+
+Para trazar cada recta se emplean dos técnicas complementarias:
+
+\begin{enumerate}[leftmargin=*, itemsep=0.3em]
+  \item \textbf{Tabla de valores:} asignar valores arbitrarios a una variable y calcular los correspondientes de la otra, obteniendo al menos dos puntos por recta. Es útil cuando los coeficientes son fraccionarios o cuando se desean varios puntos de referencia.
+  \item \textbf{Intersecciones con los ejes:} hacer \(x=0\) para obtener la ordenada al origen y hacer \(y=0\) para obtener la abscisa al origen. Esta técnica es más rápida y revela de inmediato diferencias entre las rectas.
+\end{enumerate}
+
+\subsection{Ejemplo 1: sistema con solución única (rectas no paralelas)}
+
+\[
+\begin{cases}
+y = 2x+1 \\
+y = -x+7
+\end{cases}
+\]
+
+\paragraph{Tabla de valores para \(y=2x+1\).}
+
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+\(x\) & \(y=2x+1\) & Punto \\
+\midrule
+\(-1\) & \(2(-1)+1=-1\) & \((-1,-1)\) \\
+\(0\)  & \(2(0)+1=1\)     & \((0,1)\) \\
+\(1\)  & \(2(1)+1=3\)     & \((1,3)\) \\
+\(2\)  & \(2(2)+1=5\)     & \((2,5)\) \\
+\(3\)  & \(2(3)+1=7\)     & \((3,7)\) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Tabla de valores para \(y=-x+7\).}
+
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+\(x\) & \(y=-x+7\) & Punto \\
+\midrule
+\(0\) & \(-0+7=7\) & \((0,7)\) \\
+\(2\) & \(-2+7=5\) & \((2,5)\) \\
+\(4\) & \(-4+7=3\) & \((4,3)\) \\
+\(6\) & \(-6+7=1\) & \((6,1)\) \\
+\(7\) & \(-7+7=0\) & \((7,0)\) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Intersecciones con los ejes.}
+
+Para \(y=2x+1\): con \(x=0\), \(y=1\) (corta el eje \(y\) en \((0,1)\)); con \(y=0\), \(x=-\tfrac{1}{2}\) (corta el eje \(x\) en \(\left(-\tfrac{1}{2},0\right)\)).
+
+Para \(y=-x+7\): con \(x=0\), \(y=7\) (corta el eje \(y\) en \((0,7)\)); con \(y=0\), \(x=7\) (corta el eje \(x\) en \((7,0)\)).
+
+\paragraph{Gráfica.}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  width=11cm, height=8cm,
+  xmin=-3, xmax=9, ymin=-3, ymax=10,
+  axis lines=middle,
+  xlabel={\(x\)}, ylabel={\(y\)},
+  grid=both, minor tick num=1,
+  enlargelimits=false,
+  legend pos=north west,
+  legend style={font=\small, fill=white, fill opacity=0.85, text opacity=1}
+]
+\addplot[domain=-3:4, samples=2, thick, blue] {2*x+1};
+\addlegendentry{\(y=2x+1\)}
+\addplot[domain=-3:9, samples=2, thick, red] {-x+7};
+\addlegendentry{\(y=-x+7\)}
+\addplot[only marks, mark=*, mark size=3pt, black] coordinates {(2,5)};
+\node[anchor=south west] at (axis cs:2,5) {\((2,5)\)};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\paragraph{Verificación y conclusión.} Sustituyendo \((2,5)\): \(2(2)+1=5\) \checkmark, \(-(2)+7=5\) \checkmark. Las rectas tienen pendientes distintas (\(2\) y \(-1\)), por lo que el sistema es \emph{compatible determinado} y su única solución es \((2,5)\).
+
+\subsection{Ejemplo 2: sistema con solución única (ecuaciones en forma general)}
+
+\[
+\begin{cases}
+2x + y = 6 \\
+x - y = 0
+\end{cases}
+\]
+
+Conviene despejar \(y\) para graficar con facilidad: \(y=6-2x\) y \(y=x\).
+
+\paragraph{Tabla de valores para \(y=6-2x\).}
+
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+\(x\) & \(y=6-2x\) & Punto \\
+\midrule
+\(0\) & \(6\) & \((0,6)\) \\
+\(1\) & \(4\) & \((1,4)\) \\
+\(2\) & \(2\) & \((2,2)\) \\
+\(3\) & \(0\) & \((3,0)\) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Tabla de valores para \(y=x\).}
+
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+\(x\) & \(y=x\) & Punto \\
+\midrule
+\(-1\) & \(-1\) & \((-1,-1)\) \\
+\(0\) & \(0\) & \((0,0)\) \\
+\(1\) & \(1\) & \((1,1)\) \\
+\(2\) & \(2\) & \((2,2)\) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Intersecciones con los ejes.}
+
+Para \(2x+y=6\): con \(x=0\), \(y=6\) \(\Rightarrow\) \((0,6)\); con \(y=0\), \(x=3\) \(\Rightarrow\) \((3,0)\).
+
+Para \(x-y=0\): es la recta \(y=x\), pasa por el origen. Con \(x=0\), \(y=0\) \(\Rightarrow\) \((0,0)\); y con \(y=0\), \(x=0\) \(\Rightarrow\) \((0,0)\). Es decir, solo corta los ejes en el origen.
+
+\paragraph{Gráfica.}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  width=10cm, height=8cm,
+  xmin=-2, xmax=5, ymin=-2, ymax=8,
+  axis lines=middle,
+  xlabel={\(x\)}, ylabel={\(y\)},
+  grid=both, minor tick num=1,
+  enlargelimits=false,
+  legend pos=north east,
+  legend style={font=\small, fill=white, fill opacity=0.85, text opacity=1}
+]
+\addplot[domain=-2:5, samples=2, thick, blue] {6-2*x};
+\addlegendentry{\(y=6-2x\)}
+\addplot[domain=-2:5, samples=2, thick, red] {x};
+\addlegendentry{\(y=x\)}
+\addplot[only marks, mark=*, mark size=3pt, black] coordinates {(2,2)};
+\node[anchor=south west] at (axis cs:2,2) {\((2,2)\)};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\paragraph{Verificación y conclusión.} Sustituyendo \((2,2)\): \(2(2)+2=6\) \checkmark, \(2-2=0\) \checkmark. Las rectas tienen pendientes \(-2\) y \(1\), distintas, luego el sistema tiene solución única: \((2,2)\).
+
+\subsection{Ejemplo 3: sistema sin solución (rectas paralelas)}
+
+\[
+\begin{cases}
+y = -3x + 4 \\
+y = -3x - 2
+\end{cases}
+\]
+
+\paragraph{Tabla de valores para \(y=-3x+4\).}
+
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+\(x\) & \(y=-3x+4\) & Punto \\
+\midrule
+\(-1\) & \(7\) & \((-1,7)\) \\
+\(0\)  & \(4\) & \((0,4)\) \\
+\(1\)  & \(1\) & \((1,1)\) \\
+\(2\)  & \(-2\) & \((2,-2)\) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Tabla de valores para \(y=-3x-2\).}
+
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+\(x\) & \(y=-3x-2\) & Punto \\
+\midrule
+\(-1\) & \(1\) & \((-1,1)\) \\
+\(0\)  & \(-2\) & \((0,-2)\) \\
+\(1\)  & \(-5\) & \((1,-5)\) \\
+\(2\)  & \(-8\) & \((2,-8)\) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Intersecciones con los ejes.}
+
+Para \(y=-3x+4\): \((0,4)\) y \(\left(\tfrac{4}{3},0\right)\).
+
+Para \(y=-3x-2\): \((0,-2)\) y \(\left(-\tfrac{2}{3},0\right)\).
+
+Ambas rectas tienen pendiente \(-3\) pero distinta ordenada al origen (\(4\) y \(-2\)).
+
+\paragraph{Gráfica.}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  width=10cm, height=9cm,
+  xmin=-2, xmax=3, ymin=-10, ymax=9,
+  axis lines=middle,
+  xlabel={\(x\)}, ylabel={\(y\)},
+  grid=both, minor tick num=1,
+  enlargelimits=false,
+  legend pos=north east,
+  legend style={font=\small, fill=white, fill opacity=0.85, text opacity=1}
+]
+\addplot[domain=-2:3, samples=2, thick, blue] {-3*x+4};
+\addlegendentry{\(y=-3x+4\)}
+\addplot[domain=-2:3, samples=2, thick, red, dashed] {-3*x-2};
+\addlegendentry{\(y=-3x-2\)}
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\paragraph{Conclusión.} Como las dos rectas son paralelas y distintas, nunca se cortan. El sistema es \emph{incompatible}: no tiene solución. Verificación por determinante: \(\Delta=(1)(-3)-(1)(-3)=0\) y las rectas son distintas, lo que confirma la ausencia de intersección.
+
+\subsection{Ejemplo 4: sistema con infinitas soluciones (rectas coincidentes)}
+
+\[
+\begin{cases}
+2x - 4y = 8 \\
+x - 2y = 4
+\end{cases}
+\]
+
+Dividiendo la primera ecuación entre 2 se obtiene \(x-2y=4\), que es idéntica a la segunda. Es decir, ambas ecuaciones describen la misma recta: \(y=\dfrac{x-4}{2}\).
+
+\paragraph{Tabla de valores para \(y=\dfrac{x-4}{2}\).}
+
+\begin{center}
+\begin{tabular}{ccc}
+\toprule
+\(x\) & \(y=\dfrac{x-4}{2}\) & Punto \\
+\midrule
+\(-2\) & \(-3\) & \((-2,-3)\) \\
+\(0\)  & \(-2\) & \((0,-2)\) \\
+\(2\)  & \(-1\) & \((2,-1)\) \\
+\(4\)  & \(0\)  & \((4,0)\) \\
+\(6\)  & \(1\)  & \((6,1)\) \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\paragraph{Intersecciones con los ejes.}
+
+Con \(x=0\), \(y=-2\) \(\Rightarrow\) \((0,-2)\). Con \(y=0\), \(x=4\) \(\Rightarrow\) \((4,0)\).
+
+\paragraph{Gráfica.}
+
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[
+  width=10cm, height=7cm,
+  xmin=-3, xmax=8, ymin=-4, ymax=3,
+  axis lines=middle,
+  xlabel={\(x\)}, ylabel={\(y\)},
+  grid=both, minor tick num=1,
+  enlargelimits=false,
+  legend pos=north west,
+  legend style={font=\small, fill=white, fill opacity=0.85, text opacity=1}
+]
+\addplot[domain=-3:8, samples=2, thick, blue] {(x-4)/2};
+\addlegendentry{\(2x-4y=8\)}
+\addplot[domain=-3:8, samples=2, thick, red, dashed] {(x-4)/2};
+\addlegendentry{\(x-2y=4\)}
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\paragraph{Conclusión.} Ambas ecuaciones representan la misma recta, por lo que las rectas son coincidentes y el sistema es \emph{compatible indeterminado}: tiene infinitas soluciones, que son todos los puntos \((x,y)\) de la recta \(y=\dfrac{x-4}{2}\). Verificación por determinante: \(\Delta=(2)(-2)-(-4)(1)=0\) y rectas coincidentes.
+
+%==========================================================
+\section{Ejercicios propuestos (método gráfico)}
+%==========================================================
+
+\textbf{Instrucciones:} Para cada sistema, traza ambas rectas en el plano cartesiano (usando tabla de valores o intersecciones con los ejes), localiza el punto de intersección y clasifica el sistema como \emph{compatible determinado}, \emph{compatible indeterminado} o \emph{incompatible}. Verifica la solución cuando exista.
+
+\subsection{Sistemas con solución única}
+
+\begin{enumerate}[leftmargin=*, itemsep=0.6em, start=1]
+  \item \(y = x+2;\; y = -x+6\)
+  \item \(y = 3x-2;\; y = -x+6\)
+  \item \(y = 2x;\; y = -2x+8\)
+  \item \(x+y = 5;\; x-y = 1\)
+  \item \(2x+y = 7;\; x-y = 2\)
+  \item \(3x+y = 9;\; 2x-y = 1\)
+  \item \(x+2y = 6;\; 3x-y = 4\)
+  \item \(4x-2y = 6;\; 2x+y = 7\)
+\end{enumerate}
+
+\subsection{Sistemas sin solución (rectas paralelas)}
+
+\begin{enumerate}[leftmargin=*, itemsep=0.6em, start=9]
+  \item \(y = 3x+1;\; y = 3x-4\)
+  \item \(y = -2x+5;\; y = -2x-3\)
+  \item \(2x+y = 4;\; 2x+y = 7\)
+  \item \(4x-2y = 6;\; 2x-y = 5\)
+\end{enumerate}
+
+\subsection{Sistemas con infinitas soluciones (rectas coincidentes)}
+
+\begin{enumerate}[leftmargin=*, itemsep=0.6em, start=13]
+  \item \(y = 2x-1;\; 2y = 4x-2\)
+  \item \(x+y = 4;\; 3x+3y = 12\)
+  \item \(2x-4y = 8;\; x-2y = 4\)
+  \item \(5x-10y = 20;\; x-2y = 4\)
+\end{enumerate}
+
+\subsection{Problemas contextualizados}
+
+\begin{enumerate}[leftmargin=*, itemsep=0.6em, start=17]
+  \item En un estacionamiento hay autos y motos. En total se cuentan 20 vehículos y 60 ruedas. Plantea el sistema, resuélvelo gráficamente e interpreta el punto de intersección.
+  \item La suma de dos números es 12 y su diferencia es 4. Plantea el sistema, resuélvelo gráficamente e identifica los números.
+  \item Un comerciante vende dos productos: el producto A cuesta \$30 y el producto B cuesta \$50. En un día vendió 10 artículos y recaudó \$380. Plantea el sistema y resuélvelo gráficamente.
+  \item Dos planes de internet: el plan A cobra \$200 fijos más \$5 por cada GB consumido; el plan B cobra \$300 fijos más \$3 por GB. Plantea ambas rectas, grafícalas y determina a partir de cuántos GB conviene cada plan.
+\end{enumerate}
+
+%==========================================================
+\section{Soluciones de los 20 ejercicios}
+%==========================================================
+
+\textbf{Ejercicio 1.} \(x+2=-x+6 \Rightarrow 2x=4 \Rightarrow x=2,\; y=4\). Solución: \((2,4)\). \textit{Verificación:} \(4=2+2\); \(4=-2+6\). \checkmark
+
+\textbf{Ejercicio 2.} \(3x-2=-x+6 \Rightarrow 4x=8 \Rightarrow x=2,\; y=4\). Solución: \((2,4)\). \textit{Verificación:} \(4=3(2)-2\); \(4=-2+6\). \checkmark
+
+\textbf{Ejercicio 3.} \(2x=-2x+8 \Rightarrow 4x=8 \Rightarrow x=2,\; y=4\). Solución: \((2,4)\). \textit{Verificación:} \(4=2(2)\); \(4=-2(2)+8\). \checkmark
+
+\textbf{Ejercicio 4.} Sumando: \(2x=6 \Rightarrow x=3,\; y=2\). Solución: \((3,2)\). \textit{Verificación:} \(3+2=5\); \(3-2=1\). \checkmark
+
+\textbf{Ejercicio 5.} \(y=7-2x\) y \(y=x-2\) \(\Rightarrow 7-2x=x-2 \Rightarrow x=3,\; y=1\). Solución: \((3,1)\). \textit{Verificación:} \(2(3)+1=7\); \(3-1=2\). \checkmark
+
+\textbf{Ejercicio 6.} Sumando: \(5x=10 \Rightarrow x=2,\; y=3\). Solución: \((2,3)\). \textit{Verificación:} \(3(2)+3=9\); \(2(2)-3=1\). \checkmark
+
+\textbf{Ejercicio 7.} \(y=3-\tfrac{x}{2}\) y \(y=3x-4\) \(\Rightarrow 3-\tfrac{x}{2}=3x-4 \Rightarrow x=2,\; y=2\). Solución: \((2,2)\). \textit{Verificación:} \(2+2(2)=6\); \(3(2)-2=4\). \checkmark
+
+\textbf{Ejercicio 8.} \(y=2x-3\) y \(y=7-2x\) \(\Rightarrow 2x-3=7-2x \Rightarrow x=\tfrac{5}{2},\; y=2\). Solución: \((2.5,\,2)\). \textit{Verificación:} \(4(2.5)-2(2)=6\); \(2(2.5)+2=7\). \checkmark
+
+\textbf{Ejercicio 9.} Misma pendiente \(3\), distintas ordenadas \(1\) y \(-4\). Sistema incompatible.
+
+\textbf{Ejercicio 10.} Misma pendiente \(-2\), distintas ordenadas \(5\) y \(-3\). Sistema incompatible.
+
+\textbf{Ejercicio 11.} Ambas tienen pendiente \(-2\) y cortan el eje \(y\) en \(4\) y \(7\). Sistema incompatible.
+
+\textbf{Ejercicio 12.} \(4x-2y=6\) equivale a \(2x-y=3\), pero la segunda es \(2x-y=5\). Paralelas distintas. Sistema incompatible.
+
+\textbf{Ejercicio 13.} \(2y=4x-2\) equivale a \(y=2x-1\), idéntica a la primera. Sistema compatible indeterminado: infinitas soluciones.
+
+\textbf{Ejercicio 14.} \(3x+3y=12\) equivale a \(x+y=4\), idéntica a la primera. Sistema compatible indeterminado: infinitas soluciones.
+
+\textbf{Ejercicio 15.} \(2x-4y=8\) equivale a \(x-2y=4\), idéntica a la segunda. Sistema compatible indeterminado.
+
+\textbf{Ejercicio 16.} \(5x-10y=20\) equivale a \(x-2y=4\), idéntica a la segunda. Sistema compatible indeterminado.
+
+\textbf{Ejercicio 17.} Sistema: \(a+m=20;\; 4a+2m=60\). De la primera \(m=20-a\); sustituyendo \(4a+2(20-a)=60 \Rightarrow 2a=20 \Rightarrow a=10,\; m=10\). Solución gráfica: las rectas se cortan en \((10,10)\). Hay 10 autos y 10 motos. \textit{Verificación:} \(10+10=20\); \(40+20=60\). \checkmark
+
+\textbf{Ejercicio 18.} Sistema: \(x+y=12;\; x-y=4\). Sumando: \(2x=16 \Rightarrow x=8,\; y=4\). Las rectas se cortan en \((8,4)\). Los números son 8 y 4. \textit{Verificación:} \(8+4=12\); \(8-4=4\). \checkmark
+
+\textbf{Ejercicio 19.} Sistema: \(a+b=10;\; 30a+50b=380\). Con \(b=10-a\): \(30a+50(10-a)=380 \Rightarrow -20a=-120 \Rightarrow a=6,\; b=4\). Las rectas se cortan en \((6,4)\). Se vendieron 6 unidades del producto A y 4 del producto B. \textit{Verificación:} \(6+4=10\); \(30(6)+50(4)=380\). \checkmark
+
+\textbf{Ejercicio 20.} Sistema: \(C_A=200+5g;\; C_B=300+3g\). Igualando: \(200+5g=300+3g \Rightarrow 2g=100 \Rightarrow g=50\). Las rectas se cortan en \((50,\,450)\). Con menos de 50 GB conviene el plan A; con más de 50 GB conviene el plan B; con 50 GB cuestan lo mismo.
+
+%==========================================================
+\section{Guía rápida de comprobación}
+%==========================================================
+
+\begin{itemize}
+  \item Verifica que cada recta pase por al menos dos puntos correctos (de la tabla o de las intersecciones con los ejes).
+  \item Localiza el punto de intersección con precisión: si las rectas se cruzan en un valor entero o sencillo, úsalo; si no, estima con la cuadrícula.
+  \item Sustituye \((x,y)\) en las dos ecuaciones originales.
+  \item Si las rectas parecen paralelas, confirma comparando pendientes: si son iguales y las ordenadas al origen distintas, el sistema no tiene solución.
+  \item Si las rectas parecen coincidentes, verifica que una ecuación sea múltiplo de la otra.
+  \item Calcula \(\Delta=a_1b_2-a_2b_1\) como comprobación rápida del tipo de solución.
+\end{itemize}
+
+%==========================================================
+\section{Autoevaluación}
+%==========================================================
+
+\begin{center}
+\begin{tabular}{p{7.4cm}p{2cm}p{2cm}p{2cm}}
+\toprule
+Criterio & Logrado & En proceso & Por reforzar \\
+\midrule
+Identifico el tipo de solución por la posición de las rectas. & & & \\
+Trazo rectas mediante tabla de valores. & & & \\
+Trazo rectas mediante intersecciones con los ejes. & & & \\
+Localizo correctamente el punto de intersección. & & & \\
+Clasifico el sistema como determinado, indeterminado o incompatible. & & & \\
+Verifico siempre la solución en las dos ecuaciones. & & & \\
+Traduzco problemas contextualizados a sistemas y los resuelvo gráficamente. & & & \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+%==========================================================
+\section{Glosario}
+%==========================================================
+
+\begin{itemize}
+  \item \textbf{Sistema compatible determinado:} sistema con solución única (rectas con pendientes distintas).
+  \item \textbf{Sistema compatible indeterminado:} sistema con infinitas soluciones (rectas coincidentes).
+  \item \textbf{Sistema incompatible:} sistema sin solución (rectas paralelas distintas).
+  \item \textbf{Pendiente:} inclinación de la recta; dos rectas con la misma pendiente son paralelas o coincidentes.
+  \item \textbf{Ordenada al origen:} valor de \(y\) cuando \(x=0\); punto donde la recta corta el eje \(y\).
+  \item \textbf{Abscisa al origen:} valor de \(x\) cuando \(y=0\); punto donde la recta corta el eje \(x\).
+  \item \textbf{Determinante:} número \(\Delta=a_1b_2-a_2b_1\); si \(\Delta\ne 0\), las rectas se cortan en un único punto.
+  \item \textbf{Punto de intersección:} par ordenado \((x,y)\) donde se cruzan dos rectas; es la solución del sistema.
+\end{itemize}
+
+%==========================================================
+\section{Bibliografía en formato APA}
+%==========================================================
+
+\begin{itemize}
+  \item Anton, H., \& Rorres, C. (2013). \textit{Elementary linear algebra: Applications version} (11.\textsuperscript{a} ed.). Wiley.
+  \item Grossman, S. I., \& Flores, J. J. (2019). \textit{Álgebra lineal} (8.\textsuperscript{a} ed.). McGraw-Hill.
+  \item Lay, D. C., Lay, S. R., \& McDonald, J. J. (2016). \textit{Linear algebra and its applications} (5.\textsuperscript{a} ed.). Pearson.
+  \item Swokowski, E. W., \& Cole, J. A. (2011). \textit{Álgebra y trigonometría con geometría analítica} (13.\textsuperscript{a} ed.). Cengage Learning.
+\end{itemize}
+
+%==========================================================
+\section{Nota didáctica final}
+%==========================================================
+
+El método gráfico es la puerta de entrada natural al estudio de los sistemas de ecuaciones: permite \emph{ver} la solución antes de calcularla y comprender por qué un sistema puede tener una, ninguna o infinitas soluciones según la posición relativa de las rectas. Aunque para sistemas grandes se prefieren métodos algebraicos como sustitución, eliminación o Gauss, la interpretación gráfica sigue siendo la referencia conceptual que da sentido a todos los demás métodos.
+
+\end{document}
