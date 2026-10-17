@@ -57,15 +57,15 @@ https://github.com/jcteacher-lab/metodograficomatrices2x2/blob/main/latex/métod
 
 ```
 graficador-sistemas-lineales/
-├── index.html                  # Página principal del graficador
+├── index.html
 ├── css/
-│   └── styles.css              # Estilos de la aplicación web
+│   └── styles.css
 ├── js/
-│   └── app.js                  # Lógica del graficador
+│   └── app.js
 ├── latex/
-│   ├── metodografico.tex       # Guía didáctica (fuente LaTeX)
-│   └── metodografico.pdf       # Guía didáctica (PDF compilado)
-├── LICENSE                     # GNU GPL v3
+│   ├── metodografico.tex
+│   └── metodografico.pdf
+├── LICENSE
 ├── README.md
 └── .gitignore
 ```
