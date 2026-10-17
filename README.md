@@ -10,6 +10,7 @@ a₂x + b₂y = c₂
 Cada ecuación se escribe en su forma explícita `y = mx + b` y se dibuja como una recta. La intersección de ambas rectas es la solución del sistema.
 
 El repositorio incluye además una **guía didáctica completa en LaTeX** (con su PDF compilado): teoría, ejemplos resueltos paso a paso, ejercicios propuestos y soluciones.
+
 ---
 
 ## ✨ Características
@@ -38,7 +39,6 @@ El repositorio incluye además una **guía didáctica completa en LaTeX** (con s
 
 ---
 
-
 ## 🚀 Demo en vivo
 
 Una vez publicado en GitHub Pages estará disponible en:
@@ -50,7 +50,9 @@ https://jcteacher-lab.github.io/metodograficomatrices2x2/
 La guía didáctica en PDF se puede consultar directamente aquí:
 
 ```
-https://github.com/jcteacher-lab/metodograficomatrices2x2/blob/main/latex/métodografico.pdf
+https://github.com/jcteacher-lab/metodograficomatrices2x2/blob/main/latex/metodografico.pdf
+```
+
 ---
 
 ## 📂 Estructura del proyecto
@@ -86,6 +88,7 @@ cd graficador-sistemas-lineales
 python3 -m http.server 8000
 # Abre http://localhost:8000
 ```
+
 ### Parte LaTeX (para recompilar el PDF)
 
 Requiere una distribución de LaTeX instalada (`TeX Live`, `MiKTeX` o `MacTeX`).
@@ -180,6 +183,7 @@ La guía `latex/metodografico.pdf` está pensada para:
 - Índice automático, `tocdepth=2` y `secnumdepth=2`.
 - Metadatos PDF con `hyperref` (título, autor, enlaces en color).
 - Compilación probada con `pdflatex` (dos pasadas para el índice).
+
 ---
 
 ## 🗺️ Roadmap
@@ -229,11 +233,12 @@ elección) cualquier versión posterior.
 > 📌 **Nota:** la guía didáctica (`latex/metodografico.tex` y su PDF derivado)
 > se distribuye bajo la misma licencia GPL-3.0. Puedes reutilizarla,
 > modificarla y redistribuirla citando la fuente original.
+
 ---
 
 ## 👤 Autor
 
-**Tu Nombre**
+**MTI. Juan Carlos Santiago Sánchez**
 - GitHub: [@jcteacher-lab](https://github.com/jcteacher-lab)
 - Correo: juancarlos.santiago.cb161@dgeti.sems.gob.mx
 
