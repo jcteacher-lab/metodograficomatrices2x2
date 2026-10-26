@@ -12,8 +12,22 @@ Cada ecuación se escribe en su forma explícita `y = mx + b` y se dibuja como u
 El repositorio incluye además una **guía didáctica completa en LaTeX** (con su PDF compilado): teoría, ejemplos resueltos paso a paso, ejercicios propuestos y soluciones.
 
 ---
+## Índice
 
-## Características
+1. [Características](#1-características)
+2. [Demo en vivo](#2-demo-en-vivo)
+3. [Estructura del proyecto](#3-estructura-del-proyecto)
+4. [Instalación y uso local](#4-instalación-y-uso-local)
+5. [Cómo usarlo](#5-Cómo-usarlo)
+6. [Cómo usar la guía didáctica](#6-cómo-usar-la-guía-didáctica)
+7. [Publicar en GitHub Pages](#7-publicar-en-github-pages)
+8. [Detalles técnicos](#8-detalles-técnicos)
+9. [Roadmap](#9-roadmap)
+10. [Contribuciones](#10-contribuciones)
+11. [Licencia](#11-licencia)
+12. [Autor](#12-autor)
+
+## 1. Características
 
 -  **Solución única**: muestra las coordenadas exactas del punto de corte.
 -  **Detección de sistemas incompatibles** (rectas paralelas → sin solución).
@@ -39,7 +53,7 @@ El repositorio incluye además una **guía didáctica completa en LaTeX** (con s
 
 ---
 
-##  Demo en vivo
+## 2. Demo en vivo
 
 El simulador está disponible en:
 
@@ -55,7 +69,7 @@ https://github.com/jcteacher-lab/metodograficomatrices2x2/blob/main/latex/m%C3%A
 
 ---
 
-## Estructura del proyecto
+## 3. Estructura del proyecto
 
 ```
 graficador-sistemas-lineales/
@@ -74,7 +88,7 @@ graficador-sistemas-lineales/
 
 ---
 
-## Instalación y uso local
+## 4. Instalación y uso local
 
 No requiere dependencias ni compilación. Solo necesitas un navegador moderno.
 
@@ -107,7 +121,7 @@ También puedes compilarlo en línea sin instalar nada:
 
 ---
 
-##  Cómo usarlo
+## 5. Cómo usarlo
 
 1. Introduce la **pendiente** `m` y el **intercepto** `b` de cada recta.
 2. Pulsa **Graficar** (o presiona `Enter` en cualquier campo).
@@ -128,7 +142,7 @@ Resultado: **solución única `(2, 5)`**.
 
 ---
 
-## Cómo usar la guía didáctica
+## 6. Cómo usar la guía didáctica
 
 La guía `latex/metodografico.pdf` está pensada para:
 
@@ -152,7 +166,7 @@ La guía `latex/metodografico.pdf` está pensada para:
 
 ---
 
-##  Publicar en GitHub Pages
+## 7. Publicar en GitHub Pages
 
 1. Sube el proyecto al repositorio:
    ```bash
@@ -169,7 +183,7 @@ La guía `latex/metodografico.pdf` está pensada para:
 
 ---
 
-## Detalles técnicos
+## 8. Detalles técnicos
 
 - **Canvas 2D** con `devicePixelRatio` para trazos nítidos en pantallas Retina.
 - **Transformación mundo ↔ pantalla** mediante funciones `toPxX`, `toPxY`, `toMundoX`, `toMundoY`.
@@ -187,7 +201,7 @@ La guía `latex/metodografico.pdf` está pensada para:
 
 ---
 
-## Roadmap
+## 9. Roadmap
 
 - [x] Graficador 2×2 con método gráfico.
 - [x] Guía didáctica en LaTeX + PDF (teoría, ejemplos, ejercicios y soluciones).
@@ -201,7 +215,7 @@ La guía `latex/metodografico.pdf` está pensada para:
 
 ---
 
-## Contribuciones
+## 10. Contribuciones
 
 Las contribuciones son bienvenidas. Por favor:
 
@@ -217,7 +231,7 @@ Las contribuciones son bienvenidas. Por favor:
 
 ---
 
-## Licencia
+## 11. Licencia
 
 Este proyecto se distribuye bajo la **Licencia Pública General GNU v3.0 (GPL-3.0)**.
 Consulta el archivo [LICENSE](./LICENSE) para más detalles.
@@ -237,7 +251,7 @@ elección) cualquier versión posterior.
 
 ---
 
-## Autor
+## 12. Autor
 
 **MTI. Juan Carlos Santiago Sánchez**
 - GitHub: [@jcteacher-lab](https://github.com/jcteacher-lab)
