@@ -50,7 +50,7 @@ https://jcteacher-lab.github.io/metodograficomatrices2x2/
 La guía didáctica en PDF se puede consultar directamente aquí:
 
 ```
-[metodografico.pdf](https://github.com/jcteacher-lab/metodograficomatrices2x2/blob/main/latex/m%C3%A9todografico.pdf)
+https://github.com/jcteacher-lab/metodograficomatrices2x2/blob/main/latex/m%C3%A9todografico.pdf
 ```
 
 ---
