@@ -41,7 +41,7 @@ El repositorio incluye además una **guía didáctica completa en LaTeX** (con s
 
 ##  Demo en vivo
 
-Una vez publicado en GitHub Pages estará disponible en:
+El simulador está disponible en:
 
 ```
 https://jcteacher-lab.github.io/metodograficomatrices2x2/
@@ -86,7 +86,8 @@ Descarga o clona el repositorio y abre `index.html` en tu navegador.
 git clone https://github.com/jcteacher-lab/metodograficomatrices2x2.git
 cd metodograficomatrices2x2
 python3 -m http.server 8000
-# Abre http://localhost:8000
+# Abre en tu navegador:
+http://localhost:8000
 ```
 
 ### Parte LaTeX (para recompilar el PDF)
