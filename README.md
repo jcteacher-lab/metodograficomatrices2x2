@@ -1,4 +1,4 @@
-# 📐 Graficador de Sistemas Lineales 2×2
+# Graficador de Sistemas Lineales 2×2
 
 Aplicación web interactiva para resolver y **visualizar por el método gráfico** sistemas de dos ecuaciones lineales con dos incógnitas:
 
@@ -13,33 +13,33 @@ El repositorio incluye además una **guía didáctica completa en LaTeX** (con s
 
 ---
 
-## ✨ Características
+## Características
 
-- 🎯 **Solución única**: muestra las coordenadas exactas del punto de corte.
-- ❌ **Detección de sistemas incompatibles** (rectas paralelas → sin solución).
-- ⚠️ **Detección de sistemas compatibles indeterminados** (rectas coincidentes → infinitas soluciones).
-- 🔍 **Zoom con la rueda del ratón**, centrado en el cursor.
-- 🖱️ **Desplazamiento del plano** arrastrando con el ratón.
-- 📱 **Soporte táctil**: arrastre y *pinch-to-zoom* en móviles.
-- 🧮 **Validación de entradas**: campos vacíos, no numéricos o valores no finitos.
-- ⚡ **Renderizado optimizado** con `requestAnimationFrame` y soporte para pantallas de alta densidad (Retina).
-- 🎲 Botón de **ejemplo aleatorio** para practicar.
-- 📐 Cuadrícula **adaptativa** que ajusta el paso según el nivel de zoom.
-- ♿ Accesibilidad básica (`role="status"`, `aria-live`, etiquetas `for`/`id`).
+-  **Solución única**: muestra las coordenadas exactas del punto de corte.
+-  **Detección de sistemas incompatibles** (rectas paralelas → sin solución).
+-  **Detección de sistemas compatibles indeterminados** (rectas coincidentes → infinitas soluciones).
+-  **Zoom con la rueda del ratón**, centrado en el cursor.
+-  **Desplazamiento del plano** arrastrando con el ratón.
+-  **Soporte táctil**: arrastre y *pinch-to-zoom* en móviles.
+-  **Validación de entradas**: campos vacíos, no numéricos o valores no finitos.
+-  **Renderizado optimizado** con `requestAnimationFrame` y soporte para pantallas de alta densidad (Retina).
+-  Botón de **ejemplo aleatorio** para practicar.
+-  Cuadrícula **adaptativa** que ajusta el paso según el nivel de zoom.
+-  Accesibilidad básica (`role="status"`, `aria-live`, etiquetas `for`/`id`).
 
-### 📚 Guía didáctica en LaTeX
-- 📖 **Teoría completa**: interpretación geométrica, tipos de solución y clasificación por determinante.
-- 🧭 **Método paso a paso**: tabla de valores e intersecciones con los ejes.
-- 🧮 **4 ejemplos resueltos** con tablas, gráficas (`pgfplots`) y verificación.
-- ✏️ **20 ejercicios propuestos** clasificados por tipo de sistema.
-- ✅ **Soluciones detalladas** de los 20 ejercicios.
-- 🌍 **4 problemas contextualizados** (autos/motos, planes de internet, etc.).
-- 📋 **Autoevaluación**, glosario y bibliografía en formato APA.
-- 📄 **PDF compilado** listo para imprimir o distribuir.
+###  Guía didáctica en LaTeX
+-  **Teoría completa**: interpretación geométrica, tipos de solución y clasificación por determinante.
+-  **Método paso a paso**: tabla de valores e intersecciones con los ejes.
+-  **4 ejemplos resueltos** con tablas, gráficas (`pgfplots`) y verificación.
+-  **20 ejercicios propuestos** clasificados por tipo de sistema.
+-  **Soluciones detalladas** de los 20 ejercicios.
+-  **4 problemas contextualizados** (autos/motos, planes de internet, etc.).
+-  **Autoevaluación**, glosario y bibliografía en formato APA.
+-  **PDF compilado** listo para imprimir o distribuir.
 
 ---
 
-## 🚀 Demo en vivo
+##  Demo en vivo
 
 Una vez publicado en GitHub Pages estará disponible en:
 
@@ -50,12 +50,12 @@ https://jcteacher-lab.github.io/metodograficomatrices2x2/
 La guía didáctica en PDF se puede consultar directamente aquí:
 
 ```
-https://github.com/jcteacher-lab/metodograficomatrices2x2/blob/main/latex/metodografico.pdf
+[metodografico.pdf](https://github.com/jcteacher-lab/metodograficomatrices2x2/blob/main/latex/m%C3%A9todografico.pdf)
 ```
 
 ---
 
-## 📂 Estructura del proyecto
+## Estructura del proyecto
 
 ```
 graficador-sistemas-lineales/
@@ -74,7 +74,7 @@ graficador-sistemas-lineales/
 
 ---
 
-## 🛠️ Instalación y uso local
+## Instalación y uso local
 
 No requiere dependencias ni compilación. Solo necesitas un navegador moderno.
 
@@ -83,8 +83,8 @@ Descarga o clona el repositorio y abre `index.html` en tu navegador.
 
 ### Opción B — Servidor local (recomendado)
 ```bash
-git clone https://github.com/<tu-usuario>/graficador-sistemas-lineales.git
-cd graficador-sistemas-lineales
+git clone https://github.com/jcteacher-lab/metodograficomatrices2x2.git
+cd metodograficomatrices2x2
 python3 -m http.server 8000
 # Abre http://localhost:8000
 ```
@@ -100,13 +100,13 @@ pdflatex metodografico.tex   # segunda pasada (índice y referencias)
 ```
 
 También puedes compilarlo en línea sin instalar nada:
-- 🔗 [Overleaf](https://www.overleaf.com)
-- 🔗 [TeX Live Online](https://texlive.net/)
-- 🔗 [Papeeria](https://papeeria.com/)
+-  [Overleaf](https://www.overleaf.com)
+-  [TeX Live Online](https://texlive.net/)
+-  [Papeeria](https://papeeria.com/)
 
 ---
 
-## 🖱️ Cómo usarlo
+##  Cómo usarlo
 
 1. Introduce la **pendiente** `m` y el **intercepto** `b` de cada recta.
 2. Pulsa **Graficar** (o presiona `Enter` en cualquier campo).
@@ -127,7 +127,7 @@ Resultado: **solución única `(2, 5)`**.
 
 ---
 
-## 📚 Cómo usar la guía didáctica
+## Cómo usar la guía didáctica
 
 La guía `latex/metodografico.pdf` está pensada para:
 
@@ -151,7 +151,7 @@ La guía `latex/metodografico.pdf` está pensada para:
 
 ---
 
-## 🌐 Publicar en GitHub Pages
+##  Publicar en GitHub Pages
 
 1. Sube el proyecto al repositorio:
    ```bash
@@ -159,7 +159,7 @@ La guía `latex/metodografico.pdf` está pensada para:
    git add .
    git commit -m "Initial commit: graficador 2x2"
    git branch -M main
-   git remote add origin https://github.com/<tu-usuario>/graficador-sistemas-lineales.git
+   git remote add origin https://github.com/jcteacher-lab/metodograficomatrices2x2.git
    git push -u origin main
    ```
 2. En GitHub → **Settings → Pages**.
@@ -168,7 +168,7 @@ La guía `latex/metodografico.pdf` está pensada para:
 
 ---
 
-## 🧠 Detalles técnicos
+## Detalles técnicos
 
 - **Canvas 2D** con `devicePixelRatio` para trazos nítidos en pantallas Retina.
 - **Transformación mundo ↔ pantalla** mediante funciones `toPxX`, `toPxY`, `toMundoX`, `toMundoY`.
@@ -186,7 +186,7 @@ La guía `latex/metodografico.pdf` está pensada para:
 
 ---
 
-## 🗺️ Roadmap
+## Roadmap
 
 - [x] Graficador 2×2 con método gráfico.
 - [x] Guía didáctica en LaTeX + PDF (teoría, ejemplos, ejercicios y soluciones).
@@ -200,7 +200,7 @@ La guía `latex/metodografico.pdf` está pensada para:
 
 ---
 
-## 🤝 Contribuciones
+## Contribuciones
 
 Las contribuciones son bienvenidas. Por favor:
 
@@ -216,7 +216,7 @@ Las contribuciones son bienvenidas. Por favor:
 
 ---
 
-## 📄 Licencia
+## Licencia
 
 Este proyecto se distribuye bajo la **Licencia Pública General GNU v3.0 (GPL-3.0)**.
 Consulta el archivo [LICENSE](./LICENSE) para más detalles.
@@ -230,13 +230,13 @@ Free Software Foundation, ya sea la versión 3 de la Licencia, o (a tu
 elección) cualquier versión posterior.
 ```
 
-> 📌 **Nota:** la guía didáctica (`latex/metodografico.tex` y su PDF derivado)
+> **Nota:** la guía didáctica (`latex/metodografico.tex` y su PDF derivado)
 > se distribuye bajo la misma licencia GPL-3.0. Puedes reutilizarla,
 > modificarla y redistribuirla citando la fuente original.
 
 ---
 
-## 👤 Autor
+## Autor
 
 **MTI. Juan Carlos Santiago Sánchez**
 - GitHub: [@jcteacher-lab](https://github.com/jcteacher-lab)
@@ -244,4 +244,4 @@ elección) cualquier versión posterior.
 
 ---
 
-⭐ Si este proyecto te resultó útil, considera darle una estrella en GitHub.
+ Si este proyecto te resultó útil, considera darle una estrella en GitHub.
